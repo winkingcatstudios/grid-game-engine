@@ -1,8 +1,5 @@
 # cs43700-ggEngine
-
-Blurb about my project, ggEngine aka Grid Game Engine:
-
-Everyone in class seemed to be doing a movement engine like Prof Harris' so I though I would be different and make a grid based engine. It was much more difficult that expected to limit movement to specific tiles rather than let sprites move anywhere and check for AABB collisions. This engine could be extended and used for a rogue-like, tabletop rpg simulator, turn-based RPG overworld, strategy RPG, zelda-like grid adventure, and many more!
+Grid based engine for rogue-like, tabletop rpg simulator, turn-based RPG overworld, strategy RPG, zelda-like grid adventure, and more.
 
 My current engine implements a scene and sprite. Additional features include input customization, game states for pausing the game, and frame rate calculation. There is not currently a way to add non-tile objects (ie: items, traps, etc.) or NPCs other than the player, but I have set that up as an extension of the sprite class. You can in fact create these with a spritesheet index and starting position, but the code is not implemented to draw them.
 
