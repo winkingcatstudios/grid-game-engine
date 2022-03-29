@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript"
+    src = "ggEngine.js">
+</script>
+
+<script type="text/javascript">
+    // grid, tileWidth, tileHeight are required
+    var grid = [
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 4, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 
+	0, 4, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 
+	0, 4, 1, 1, 2, 2, 1, 1, 4, 4, 4, 4, 1, 1, 0, 
+	0, 4, 1, 1, 1, 2, 2, 1, 4, 1, 1, 4, 1, 1, 0, 
+	0, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 4, 4, 4, 0, 
+	0, 3, 3, 3, 3, 4, 2, 3, 4, 4, 4, 4, 4, 3, 0, 
+	0, 3, 3, 3, 3, 4, 2, 3, 3, 3, 3, 3, 4, 3, 0, 
+	0, 3, 3, 3, 3, 4, 2, 2, 2, 2, 2, 3, 4, 3, 0, 
+	0, 3, 3, 3, 3, 4, 3, 3, 3, 3, 2, 3, 4, 3, 0, 
+	0, 1, 4, 4, 4, 4, 3, 3, 3, 3, 2, 3, 4, 3, 0, 
+	0, 1, 4, 1, 1, 4, 3, 3, 3, 3, 2, 2, 4, 2, 0, 
+	0, 1, 4, 1, 1, 4, 3, 3, 3, 3, 3, 3, 4, 1, 0, 
+	0, 1, 4, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 1, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    ];  
+    var tileWidth = 64; 
+    var tileHeight = 64;
+
+	// KeyPrefs(up, left, down, right, pause, controlsMessage)
+	// Example1: Arrows + P
+	//keys = new KeyPrefs(38, 37, 40, 39, 80, "Arrows + P");
+	// Example2: WASD + Esc
+	keys = new KeyPrefs(87, 65, 83, 68, 27, "WASD + Esc");
+    
+    // Sprite(spriteWidth, spriteHeight, posTileX, posTileY, spriteSheetIndex)
+	// Choose man or woman, and pass the choice to scene
+	// Example1: man
+	//human = new Sprite(64, 64, 1, 1, 1);
+	// Example2: woman
+    human = new Sprite(64, 64, 1, 1, 2);
+
+    // Scene(playerSprite, gridWidth, gridHeight, spriteSheet)
+    scene = new Scene(human, keys, 15, 15, "spriteSheet2.png");
+
+    // Call to start scene
+    scene.init();
+</script>
+
+</head>
+<body>
+
+    <canvas id="game" width="800" height="600"></canvas>
+
+</body>
+</html>
